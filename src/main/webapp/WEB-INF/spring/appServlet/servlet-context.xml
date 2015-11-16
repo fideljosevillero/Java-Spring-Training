@@ -25,7 +25,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.fideljose.training" />
+	<context:component-scan base-package="com.fideljose.training.Controllers" />
 	
 	<!-- my code -->
 	<beans:bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
@@ -34,6 +34,9 @@
 			<beans:list>
 				<!-- <beans:value>classpath:org/joedayz/corespringtest/model/Category.hbm.xml</beans:value>
 				<beans:value>classpath:org/joedayz/corespringtest/model/Product.hbm.xml</beans:value> -->
+				<!-- <beans:value>classpath:Category.hbm.xml</beans:value> -->
+				<beans:value>classpath*:Category.hbm.xml</beans:value>
+				<beans:value>classpath*:Product.hbm.xml</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
