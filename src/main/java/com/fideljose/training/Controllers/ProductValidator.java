@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import com.fideljose.training.Service.ProductManager;
 import com.fideljose.training.model.Product;
 
 public class ProductValidator implements Validator {

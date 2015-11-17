@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Category" table="category">
+        <id name="idCategory" type="java.lang.Integer">
+            <column name="ID_CATEGORY" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="50" not-null="true" />
+        </property>
+        <property name="code" type="java.lang.Integer">
+        	<column name="CODE" length="11" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

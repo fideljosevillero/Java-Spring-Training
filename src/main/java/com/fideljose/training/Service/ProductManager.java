@@ -3,6 +3,8 @@ package com.fideljose.training.Service;
 import com.fideljose.training.model.*;
 import java.util.*;
 
+
+
 public interface ProductManager {
 	public List<Product> getProductsList(Product product);
 	public Product getProductById(Integer idProduct);

@@ -1,12 +1,15 @@
 package com.fideljose.training.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.fideljose.training.Dao.ProductDao;
 import com.fideljose.training.model.*;
 import java.util.*;
 
+@Service
 public class ProductManagerImpl implements ProductManager {
+	
 	@Autowired
 	private ProductDao productDao;
 	

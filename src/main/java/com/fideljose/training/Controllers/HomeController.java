@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import com.fideljose.training.model.*;
 
 /**
  * Handles requests for the application home page.
@@ -36,6 +37,27 @@ public class HomeController {
 		return "home";
 	}
 	
+        @RequestMapping(value = "/categoria", method = RequestMethod.GET)
+	public String categoria(Locale locale, Model model) {
+                    logger.info("Welcome home! The client locale is {}.", locale);
+		
+//		Date date = new Date();
+//		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+//		
+//		String formattedDate = dateFormat.format(date);
+//		
+//		model.addAttribute("serverTime", formattedDate );
+                Category l = new Category();
+                l.setName("categoria 1");
+                l.setIdCategory(1);
+//		Category[] j = null;
+//                j[1].setName("categoria 1");
+//                j[1].setIdCategory(1);
+                model.addAttribute("categoria", l);
+		return "categoria";
+	}
+        
+        
 //	@RequestMapping("/")
 //	public String inicio() {
 //		return "inicio";
